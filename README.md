@@ -14,3 +14,6 @@
 - React
 - Redux-toolkit
 - Styled Components
+
+## Деплой:
+https://66279f227953010008625b4a--test-21042024.netlify.app/
