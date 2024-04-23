@@ -14,6 +14,3 @@
 - React
 - Redux-toolkit
 - Styled Components
-
-## GitHub Pages
-https://rviprofile.github.io/test_21042024/
