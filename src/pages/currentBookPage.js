@@ -18,7 +18,7 @@ export default function CurrentBookPage() {
                 store
                     .getState()
                     .search.resultSearch.content.results.find(
-                        (item) => item.id == id
+                        (item) => item.id === id
                     )
             );
         }
@@ -29,16 +29,26 @@ export default function CurrentBookPage() {
             <Container>
                 <NavButton />
                 <CoverImg src={currentBook.formats[img_src]} />
-                <hr/>
-                <div>Название: <b>{currentBook.title}</b></div>
-                <div>Автор: <b>{currentBook.authors[0].name}</b></div>
+                <hr />
+                <div>
+                    Название: <b>{currentBook.title}</b>
+                </div>
+                <div>
+                    Автор: <b>{currentBook.authors[0].name}</b>
+                </div>
                 <div>
                     Есть на полках:
                     {currentBook.bookshelves.map((item) => {
-                        return <b><p key={item}>{item}</p></b>;
+                        return (
+                            <b>
+                                <p key={item}>{item}</p>
+                            </b>
+                        );
                     })}
                 </div>
-                <div>Скачано раз: <b>{currentBook.download_count}</b></div>
+                <div>
+                    Скачано раз: <b>{currentBook.download_count}</b>
+                </div>
             </Container>
         );
     } else {

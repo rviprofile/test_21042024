@@ -15,7 +15,6 @@ export default function searchReducer(state = initialState, action) {
             return {
                 ...state,
                 resultSearch: { content: { results: updateArray } },
-                
             };
         }
         default:

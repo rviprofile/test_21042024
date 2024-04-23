@@ -43,6 +43,8 @@ export const ListOfCards = ({ showFavorites }) => {
                                       isLike={arrayOfLikes.includes(item)}
                                   />
                               );
+                          } else {
+                              return '';
                           }
                       })
                     : // Иначе рендер по массиву всех книг
