@@ -10,7 +10,8 @@ export default function CurrentBookPage() {
     // Состояние с выбранной книгой
     const [currentBook, setCurrentBook] = useState();
     // Id выбранной книги из URL
-    const id = useParams().id;
+    const id = Number(useParams().id);
+    console.log(id);
     useEffect(() => {
         // Ищем книгу с нужным id в store
         if (store.getState().search.resultSearch) {
